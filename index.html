@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GARAGE</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 100px;">
+  <h1> Stato Garage</h1>
+  <div id="stato" style="font-size: 40px; font-weight: bold;"></div>
+  <button onclick="genera()">scopri stato</button>
+  <script>
+    function genera() {
+      const numero = Math.floor(Math.random() * 2);
+
+      if (numero === 0) {
+        document.getElementById("stato").innerText = "OCCUPATO";
+        
+        fetch("http://localhost:8000/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          stato: "occupato"
+        })
+      })
+      } else {
+        document.getElementById("stato").innerText = "LIBERO";
+        
+        fetch("http://localhost:8000/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          stato: "libero"
+        })
+      })
+      }
+    }
+  </script>
+</body>
+</html>
