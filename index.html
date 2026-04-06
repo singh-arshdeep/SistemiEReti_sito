@@ -28,6 +28,9 @@
           body: JSON.stringify({
             stato: "occupato"
           })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error))
         })
       } else {
         document.getElementById("stato").innerText = "LIBERO";
@@ -40,6 +43,9 @@
           body: JSON.stringify({
             stato: "libero"
           })
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error))
         })
       }
     }
