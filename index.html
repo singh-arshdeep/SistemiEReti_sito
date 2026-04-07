@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -10,14 +11,13 @@
 <body style="font-family: Arial; text-align: center; margin-top: 100px;">
   <h1> Stato Garage</h1>
   <div id="stato" style="font-size: 40px; font-weight: bold;"></div>
-  <button onclick="genera()">scopri stato</button>
+  <button onclick="genera1()">LIBERO</button>
+  <button onclick="genera2()">OCCUPATO</button>
   <script>
     const sito = "https://julianna-gloveless-isomerically.ngrok-free.dev"
 
-    function genera() {
-      const numero = Math.floor(Math.random() * 2);
-
-      if (numero === 0) {
+    function genera2() {
+    
         document.getElementById("stato").innerText = "OCCUPATO";
 
         fetch(`${sito}/send`, {
@@ -29,7 +29,8 @@
             stato: "occupato"
           })
         })
-      } else {
+      } 
+      function genera1() {
         document.getElementById("stato").innerText = "LIBERO";
 
         fetch(`${sito}/send`, {
@@ -42,7 +43,7 @@
           })
         })
       }
-    }
+    
   </script>
 </body>
 
