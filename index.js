@@ -24,8 +24,6 @@ app.post('/invio', (req, res) => {
     if (!garage || (garage != "aperto" && garage != "chiuso")) {
         console.log("Dati Errati")
     } else if (garage == "aperto") {
-        // 
     } else if (garage == "chiuso") {
-        // 
     }
 })
