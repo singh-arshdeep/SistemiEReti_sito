@@ -17,29 +17,29 @@ index.html
     const sito = "https://julianna-gloveless-isomerically.ngrok-free.dev"
 
     function occupato() {
-        document.getElementById("stato").innerText = "OCCUPATO";
-        fetch(`${sito}/send`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            stato: "occupato"
-          })
+      document.getElementById("stato").innerText = "OCCUPATO";
+      fetch(`${sito}/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          stato: "occupato"
         })
-      } 
-      function libero() {
-        document.getElementById("stato").innerText = "LIBERO";
-        fetch(`${sito}/send`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            stato: "libero"
-          })
+      })
+    }
+    function libero() {
+      document.getElementById("stato").innerText = "LIBERO";
+      fetch(`${sito}/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          stato: "libero"
         })
-      }
+      })
+    }
   </script>
 </body>
 

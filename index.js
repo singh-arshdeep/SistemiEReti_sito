@@ -20,10 +20,13 @@ app.listen(port, () => {
 })
 
 app.post('/invio', (req, res) => {
+    let garage1;
     const { garage } = req.body;
     if (!garage || (garage != "aperto" && garage != "chiuso")) {
         console.log("Dati Errati")
     } else if (garage == "aperto") {
+        console.log("Il garage è stato aperto")
     } else if (garage == "chiuso") {
+        console.log("Il garage è stato chiuso")
     }
 })
