@@ -9,10 +9,12 @@
 </head>
 
 <body style="font-family: Arial; text-align: center; margin-top: 100px;">
-  <h1> Stato Garage</h1>
+ <h1> DISPONIBILTA' DEL GARAGE</h1></div>
   <div id="stato" style="font-size: 40px; font-weight: bold;"></div>
-  <button onclick="libero()">LIBERO</button>
-  <button onclick="occupato()">OCCUPATO</button>
+  <div style=" background-color: #fbfbfb;border: none;color: #162233;font-size: 1.2rem;padding: 12px 30px;border-radius: 30px;cursor: pointer;transition: transform 0.3s ease, background-color 0.3s ease;position: relative;z-index: 10;pointer-events: auto;">
+  <button  onclick="libero()"> LIBERO</button></div>
+  <div style=" background-color: #fbfbfb;border: none;color: #162233;font-size: 1.2rem;padding: 12px 30px;border-radius: 30px;cursor: pointer;transition: transform 0.3s ease, background-color 0.3s ease;position: relative;z-index: 10;pointer-events: auto;"></div>
+  <button onclick="occupato()">OCCUPATO</button></div>
   <script>
     const sito = "https://julianna-gloveless-isomerically.ngrok-free.dev"
 
@@ -41,6 +43,27 @@
         })
       }
   </script>
+
+   <h1> STATO DELLA SERRANDA DEL GARAGE</h1>
+  <div id="stato" style="font-size: 40px; font-weight: bold;"></div>
+   <div style=" background-color: #fbfbfb;border: none;color: #162233;font-size: 1.2rem;padding: 12px 30px;border-radius: 30px;cursor: pointer;transition: transform 0.3s ease, background-color 0.3s ease;position: relative;z-index: 10;pointer-events: auto;"></div>
+  <button id="1">Il grage è aperto</button></div>
+ <div style=" background-color: #fbfbfb;border: none;color: #162233;font-size: 1.2rem;padding: 12px 30px;border-radius: 30px;cursor: pointer;transition: transform 0.3s ease, background-color 0.3s ease;position: relative;z-index: 10;pointer-events: auto;"></div>
+  <button id ="2">Il grage è chiuso</button></div>
+
+  <script>
+ const stato = fetch(invio);
+ const btn1 = document.getElementById("1");
+ const btn2 = document.getElementById("2");
+ if(stato === "garage aperto"){
+   btn1.style.backgroundColor.green;
+ }
+  if(stato === "garage chiuso"){
+   btn2.style.backgroundColor.green;
+ }
+  </script>
+
+
 </body>
 
 </html>
