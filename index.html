@@ -17,9 +17,7 @@
     const sito = "https://julianna-gloveless-isomerically.ngrok-free.dev"
 
     function occupato() {
-    
         document.getElementById("stato").innerText = "OCCUPATO";
-
         fetch(`${sito}/send`, {
           method: "POST",
           headers: {
@@ -32,7 +30,6 @@
       } 
       function libero() {
         document.getElementById("stato").innerText = "LIBERO";
-
         fetch(`${sito}/send`, {
           method: "POST",
           headers: {
@@ -43,7 +40,6 @@
           })
         })
       }
-    
   </script>
 </body>
 
